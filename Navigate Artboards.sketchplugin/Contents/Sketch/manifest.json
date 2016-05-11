@@ -1,0 +1,35 @@
+{
+  "author" : "Daniel Eden",
+  "commands" : [
+    {
+      "script" : "script.cocoascript",
+      "name" : "Next Artboard",
+      "shortcut" : "cmd ]",
+      "handlers" : {
+        "run" : "nextArtboard"
+      },
+      "identifier" : "goToNextArtboard"
+    },
+    {
+      "script" : "script.cocoascript",
+      "name" : "Previous Artboard",
+      "shortcut" : "cmd [",
+      "handlers" : {
+        "run" : "previousArtboard"
+      },
+      "identifier" : "goToPreviousArtboard"
+    }
+  ],
+  "menu" : {
+    "items" : [
+      "goToNextArtboard",
+      "goToPreviousArtboard"
+    ],
+    "title" : "Navigate Artboards"
+  },
+  "identifier" : "com.example.sketch.38a948dc-9a41-4330-a192-4bb631230ec0",
+  "version" : "1.0",
+  "description" : "Navigate between artboards in the current page",
+  "authorEmail" : "dan.eden@me.com",
+  "name" : "Navigate Artboards"
+}
