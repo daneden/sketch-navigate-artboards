@@ -20,7 +20,8 @@ var onRun = function(doc, direction) {
   // Select and center the new artboard
   artboard.select_byExpandingSelection(true, false)
   var view = doc.currentView()
-  view.centerRect(artboard.rect())
+  var viewRect = artboard.rect();
+  view.centerRect(viewRect)
 };
 
 var nextArtboard = function(context) {

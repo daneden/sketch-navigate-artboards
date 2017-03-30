@@ -2,7 +2,7 @@
   "author" : "Daniel Eden",
   "commands" : [
     {
-      "script" : "script.cocoascript",
+      "script" : "script.js",
       "name" : "Next Artboard",
       "shortcut" : "cmd ]",
       "handlers" : {
@@ -11,7 +11,7 @@
       "identifier" : "goToNextArtboard"
     },
     {
-      "script" : "script.cocoascript",
+      "script" : "script.js",
       "name" : "Previous Artboard",
       "shortcut" : "cmd [",
       "handlers" : {
