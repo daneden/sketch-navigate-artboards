@@ -28,7 +28,6 @@ var onRun = function(doc, direction) {
     page.select_byExtendingSelection(true, true);
   }
 
-
   artboard.select_byExpandingSelection(true, false)
   var view = doc.currentView()
   var viewRect = artboard.rect();
