@@ -1,3 +1,9 @@
+var onRun = function(doc, direction) {
+  var page = doc.currentPage()
+
+  var max = page.artboards().count()
+  var currentArtboard = page.artboards().indexOfObject(page.currentArtboard())
+
   if(page.deselectAllLayers){
     page.deselectAllLayers();
   }else{
@@ -38,5 +44,3 @@ var previousArtboard = function(context) {
   var doc = context.document
   onRun(doc, -1)
 };
-
-
