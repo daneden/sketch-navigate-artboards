@@ -1,10 +1,8 @@
-var onRun = function(doc, direction) {
-  var page = doc.currentPage()
-
-  var max = page.artboards().count()
-  var currentArtboard = page.artboards().indexOfObject(page.currentArtboard())
-
-  page.deselectAllLayers()
+  if(page.deselectAllLayers){
+    page.deselectAllLayers();
+  }else{
+    page.changeSelectionBySelectingLayers_([]);
+  }
 
   var newSelection = currentArtboard + direction
 
@@ -18,6 +16,13 @@ var onRun = function(doc, direction) {
   var artboard = page.artboards()[newSelection]
 
   // Select and center the new artboard
+  if (page.select_byExpandingSelection) {
+    page.select_byExpandingSelection(true, true);
+  } else {
+    page.select_byExtendingSelection(true, true);
+  }
+
+
   artboard.select_byExpandingSelection(true, false)
   var view = doc.currentView()
   var viewRect = artboard.rect();
@@ -33,4 +38,5 @@ var previousArtboard = function(context) {
   var doc = context.document
   onRun(doc, -1)
 };
+
 
